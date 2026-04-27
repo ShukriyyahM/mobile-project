@@ -39,9 +39,9 @@ export default function ReportsPage() {
       <h1 className="text-2xl font-bold text-green-800 mb-6">Reports</h1>
 
       {loading ? (
-        <p>Loading...</p>
+        <p className="text-gray-500">Loading...</p>
       ) : reports.length === 0 ? (
-        <p className="text-gray-500">No reports found.</p>
+        <p className="text-gray-700">No reports found.</p>
       ) : (
         <div className="grid gap-4">
           {reports.map((report) => (

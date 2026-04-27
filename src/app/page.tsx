@@ -35,10 +35,6 @@ export default function Home() {
               About
             </a>
 
-            <a href="#how" className="hover:text-green-700">
-              How It Works
-            </a>
-
             <a href="#features" className="hover:text-green-700">
               Features
             </a>
