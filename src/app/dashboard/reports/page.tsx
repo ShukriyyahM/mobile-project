@@ -8,31 +8,31 @@ export default function ReportsPage() {
   const [reports, setReports] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchReports = async () => {
-      try {
-        const q = query(
-          collection(db, "reports"),
-          orderBy("createdAt", "desc")
-        );
+ useEffect(() => {
+  const fetchReports = async () => {
+    try {
+      const q = query(
+        collection(db, "reports"),
+        orderBy("createdAt", "desc")
+      );
 
-        const snapshot = await getDocs(q);
+      const snapshot = await getDocs(q);
 
-        const data = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
+      const data = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
 
-        setReports(data);
-      } catch (error) {
-        console.error(error);
-      }
+      setReports(data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false); 
+    }
+  };
 
-      setLoading(false);
-    };
-
-    fetchReports();
-  }, []);
+  fetchReports();
+}, []);
 
   return (
     <div>
