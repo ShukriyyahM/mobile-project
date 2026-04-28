@@ -23,21 +23,25 @@ export default function MapPage() {
   }, []);
 
   return (
+  <div className="h-screen w-full flex flex-col">
+
+    
     <div className="p-6">
-      <h1 className="text-2xl font-bold text-green-800 mb-6">Outbreak Map</h1>
+      <h1 className="text-2xl font-bold text-green-800">
+        Outbreak Map
+      </h1>
+    </div>
 
-      
-      <div className="w-full h-125 rounded-lg overflow-hidden mb-6">
-        <iframe
-          width="100%"
-          height="100%"
-          loading="lazy"
-          allowFullScreen
-          src="https://www.google.com/maps?q=9.082,8.6753&z=6&output=embed"
-        ></iframe>
-      </div>
+    <div className="flex-1 w-full">
+      <iframe
+        className="w-full h-full"
+        loading="lazy"
+        allowFullScreen
+        src="https://www.google.com/maps?q=Nigeria&z=6&output=embed"
+      ></iframe>
+    </div>
 
-      
+    <div className="p-6 bg-gray-50 overflow-y-auto max-h-75">
       <div className="grid gap-4">
         {reports.map((report) => (
           <div
@@ -59,5 +63,7 @@ export default function MapPage() {
         ))}
       </div>
     </div>
-  );
+
+  </div>
+);
 }
