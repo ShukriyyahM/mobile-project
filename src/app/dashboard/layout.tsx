@@ -6,8 +6,6 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 
-
-
 export default function DashboardLayout({children} : any) {
     const router = useRouter ();
 
@@ -45,6 +43,8 @@ export default function DashboardLayout({children} : any) {
                          <Link href="/dashboard/settings" className="flex items-center gap-2 text-gray-700 hover:text-green-800">
                             <Settings size={18} /> Settings
                         </Link>
+
+                        <Link href="/dashboard/report/create">New Report</Link>
                     </nav>
                 </div>
 
