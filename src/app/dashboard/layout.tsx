@@ -17,6 +17,7 @@ export default function DashboardLayout({
         color: "white",
         padding: "20px"
       }}>
+        
         <h2>Aviflu</h2>
 
         <nav style={{ marginTop: "20px" }}>
