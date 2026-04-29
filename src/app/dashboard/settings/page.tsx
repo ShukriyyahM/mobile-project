@@ -3,7 +3,7 @@
 export default function Settings() {
     return (
         <div>
-            <h1 className="text-2xl  text-green-800 font-bold mb-6">
+            <h1 className="text-2xl text-green-800 font-bold mb-6">
                 Settings
             </h1>
 
