@@ -13,7 +13,7 @@ export default function DashboardLayout({
       
       <aside style={{
         width: "220px",
-        background: "#111827",
+        background: "#166534",
         color: "white",
         padding: "20px"
       }}>
