@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "@/lib/firebase";
@@ -22,6 +22,11 @@ export default function Login() {
     setLoading(true);
     setError("");
     setMessage("");
+
+    useEffect(() => {
+      console.log("ENV TEST:",
+        process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+    }, []);
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
