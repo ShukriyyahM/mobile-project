@@ -23,10 +23,10 @@ export default function Login() {
     setError("");
     setMessage("");
 
-    useEffect(() => {
-      console.log("ENV TEST:",
-        process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
-    }, []);
+    // useEffect(() => {
+    //   console.log("ENV TEST:",
+    //     process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+    // }, []);
 
     try {
       await signInWithEmailAndPassword(auth, email, password);

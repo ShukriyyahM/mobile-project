@@ -51,7 +51,7 @@ export default function CreateReport() {
   return (
     <div className="max-w-xl mx-auto">
 
-      <h1 className="text-2xl font-bold mb-6">
+      <h1 className="text-2xl font-bold text-green-800 mb-6">
         Submit Report
       </h1>
 
@@ -63,7 +63,7 @@ export default function CreateReport() {
           onChange={(e) =>
             setForm({ ...form, farmerName: e.target.value })
           }
-          className="w-full p-3 border rounded"
+          className="w-full text-gray-600 border p-2"
         />
 
         <input
@@ -72,7 +72,7 @@ export default function CreateReport() {
           onChange={(e) =>
             setForm({ ...form, address: e.target.value })
           }
-          className="w-full p-3 border rounded"
+          className="w-full text-gray-600 border p-2"
         />
 
         <input
@@ -81,7 +81,7 @@ export default function CreateReport() {
           onChange={(e) =>
             setForm({ ...form, poultryType: e.target.value })
           }
-          className="w-full p-3 border rounded"
+          className="w-full text-gray-600 border p-2"
         />
 
         <input
@@ -91,7 +91,7 @@ export default function CreateReport() {
           onChange={(e) =>
             setForm({ ...form, flockSize: e.target.value })
           }
-          className="w-full p-3 border rounded"
+          className="w-full text-gray-600 border p-2"
         />
 
         <input
@@ -100,7 +100,7 @@ export default function CreateReport() {
           onChange={(e) =>
             setForm({ ...form, date: e.target.value })
           }
-          className="w-full p-3 border rounded"
+          className="w-full text-gray-600 border p-2"
         />
 
        

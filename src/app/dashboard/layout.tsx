@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FileText, Home, Settings, LogOut } from "lucide-react";
+import { FileText, Home, Settings,  LogOut, FileCheck } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -44,7 +44,9 @@ export default function DashboardLayout({children} : any) {
                             <Settings size={18} /> Settings
                         </Link>
 
-                        <Link href="/dashboard/report/create">New Report</Link>
+                        <Link href="/dashboard/report/create" className="flex items-center gap-2 text-gray-700 hover:text-green-800">
+                            <FileCheck size={18} /> New Report
+                        </Link>
                     </nav>
                 </div>
 
