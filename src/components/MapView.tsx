@@ -9,7 +9,7 @@ import {
   Circle,
 } from "react-leaflet";
 import type { LatLngExpression } from "leaflet";
-import "leaflet/dist/leaflet.css";
+
 
 type Report = {
   id: string;
