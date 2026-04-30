@@ -26,7 +26,7 @@ export default function ForgotPassword() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-green-100 px-4">
+    <main className="min-h-screen flex items-center justify-center bg-green-900 px-4">
 
       <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md">
 
@@ -53,7 +53,7 @@ export default function ForgotPassword() {
             <input
               type="email"
               required
-              className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-600"
+              className="w-full mt-1 px-4 py-2 border text-gray-600 rounded-lg focus:ring-2 focus:ring-green-600"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
