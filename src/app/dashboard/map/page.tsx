@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { db } from "@/lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import { useRouter } from "next/navigation";
 
 export default function MapPage() {
   const [reports, setReports] = useState<any[]>([]);
@@ -21,6 +22,19 @@ export default function MapPage() {
 
     fetchReports();
   }, []);
+
+  const [role, setRole] = useState<string|null>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const storedRole = localStorage.getItem("role");
+    setRole(storedRole);
+
+    if (storedRole === "farmer") {
+      router.push("/dashboard");
+    }
+  }, []);
+     
 
   return (
   <div className="h-screen w-full flex flex-col">
