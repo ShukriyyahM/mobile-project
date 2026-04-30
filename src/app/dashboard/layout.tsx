@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import "leaflet/dist/leaflet.css";
 
 export default function DashboardLayout({
   children,
