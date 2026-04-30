@@ -78,7 +78,7 @@ export default function ReportPage() {
         <button
           type="button"
           onClick={getLocation}
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+          className="bg-green-700 text-white px-4 py-2 rounded-lg"
         >
           Get GPS Location
         </button>
@@ -86,7 +86,7 @@ export default function ReportPage() {
         
         {location && (
           <p className="text-sm text-gray-600">
-            📍 Location captured
+             Location captured
           </p>
         )}
 

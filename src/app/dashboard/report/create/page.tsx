@@ -107,12 +107,12 @@ export default function CreateReport() {
         <button
           type="button"
           onClick={getLocation}
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-green-700 text-white px-4 py-2 rounded"
         >
           Get GPS Location
         </button>
 
-        {location && <p>📍 Location captured</p>}
+        {location && <p> Location captured</p>}
 
         <button className="w-full bg-green-700 text-white py-3 rounded">
           Submit Report
